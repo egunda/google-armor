@@ -1,0 +1,26 @@
+OWASP Top 10 rules and few others:
+
+evaluatePreconfiguredWaf('sqli-v33-stable', {'sensitivity': 2})
+evaluatePreconfiguredWaf('xss-v33-stable', {'sensitivity': 2})
+evaluatePreconfiguredWaf('lfi-v33-stable', {'sensitivity': 2})
+evaluatePreconfiguredWaf(‘rfi-v33-stable', {'sensitivity': 2})
+evaluatePreconfiguredExpr('rce-v33-stable')
+evaluatePreconfiguredExpr('methodenforcement-v33-stable')
+evaluatePreconfiguredWaf('scannerdetection-v33-stable', {'sensitivity': 2})
+evaluatePreconfiguredWaf('protocolattack-v33-stable', {'sensitivity': 2})
+evaluatePreconfiguredWaf('php-v33-stable', {'sensitivity': 2})
+evaluatePreconfiguredWaf('sessionfixation-v33-stable', {'sensitivity': 2})
+evaluatePreconfiguredWaf('java-v33-stable', {'sensitivity': 2})
+evaluatePreconfiguredWaf('nodejs-v33-stable', {'sensitivity': 1})
+evaluatePreconfiguredExpr('cve-canary')
+evaluatePreconfiguredWaf('json-sqli-canary', {'sensitivity': 2})
+
+If Managed Protection Plus enabled then only threat intel will work:
+evaluateThreatIntelligence('iplist-known-malicious-ips')
+
+To Test SQLI:
+' or TRUE —
+' or 1=1;--
+‘ or 1=1’
+
+<iframe src=”javascript:alert(`xss`)”>
